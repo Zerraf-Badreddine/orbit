@@ -1,0 +1,28 @@
+### Test Better Auth Setup
+
+### 1. Sign Up with Email
+POST http://localhost:3000/api/auth/sign-up/email
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "password123",
+  "name": "Test User"
+}
+
+### 2. Sign In with Email
+POST http://localhost:3000/api/auth/sign-in/email
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "password123"
+}
+
+### 3. Get Current Session
+GET http://localhost:3000/api/auth/session
+Cookie: better_auth_session=YOUR_SESSION_TOKEN_HERE
+
+### 4. Sign Out
+POST http://localhost:3000/api/auth/sign-out
+Cookie: better_auth_session=YOUR_SESSION_TOKEN_HERE

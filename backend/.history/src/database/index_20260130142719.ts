@@ -1,0 +1,8 @@
+import { postgres } from 'bun';
+import {drizzle} from 'drizzle-orm/postgres-js';
+ik[]
+
+const pgClient = postgres()
+export const db = drizzle({
+    da
+})

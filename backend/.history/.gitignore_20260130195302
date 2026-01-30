@@ -1,0 +1,45 @@
+# deps
+# Dependencies
+node_modules/
+bun.lock
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+*.js.map
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# History
+.history/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Drizzle
+drizzle/
+/
