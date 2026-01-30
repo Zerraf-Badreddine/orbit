@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  /* Orbit Design System - Swiss International Style */
+
+  /* Color Palette */
+  --color-bg-main: #f7f7f5;
+  --color-bg-surface: #ffffff;
+  --color-text-primary: #18181b;
+  --color-text-secondary: #71717a;
+  --color-accent-primary: #ea580c;
+  --color-accent-hover: #c2410c;
+  --color-border-subtle: #e4e4e7;
+  --color-success: #16a34a;
+  --color-warning: #eab308;
+
+  /* Typography Scale */
+  --font-family-sans: "Inter", system-ui, sans-serif;
+  --font-family-serif: "Playfair Display", Georgia, serif;
+
+  /* Shadows - Soft, diffused, layered */
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.02), 0 4px 16px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover:
+    0 2px 4px rgba(0, 0, 0, 0.02), 0 8px 24px rgba(0, 0, 0, 0.06);
+  --shadow-elevated:
+    0 4px 6px rgba(0, 0, 0, 0.02), 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Base Styles */
+html {
+  font-family: var(--font-family-sans);
+  background-color: var(--color-bg-main);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Serif Display Numbers */
+.font-serif {
+  font-family: var(--font-family-serif);
+}
+
+/* Card Base */
+.card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 4px;
+  box-shadow: var(--shadow-card);
+  transition:
+    transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  transform: scale(0.98);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Mask Reveal Container */
+.reveal-mask {
+  overflow: hidden;
+}
+
+.reveal-content {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.reveal-content.revealed {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-subtle);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-secondary);
+}
+
+/* Tight Letter Spacing for UI */
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
+.tracking-tighter {
+  letter-spacing: -0.05em;
+}
