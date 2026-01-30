@@ -51,3 +51,4 @@ drizzle/meta/
 # Bun
 .bun/
 bun.lockb
+.history/
